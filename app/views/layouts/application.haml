@@ -1,0 +1,14 @@
+!!! 5
+- stylesheets =  ['bootstrap.min.css', 'bootstrap-responsive.min.css']
+- stylesheets = stylesheets << @spc_css
+- stylesheets = stylesheets.flatten
+%html
+  %head
+    %title= @title
+    = stylesheet_link_tag stylesheets
+    = javascript_include_tag 'jquery', 'bootstrap.min.js', 'application'
+
+  %body
+    #main= yield
+    
+  

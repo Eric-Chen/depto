@@ -1,0 +1,14 @@
+- @title = "Test"
+- @spc_css = "login.css"
+.container
+  %form{:class => 'form-signin'}
+    %h2 Join us
+    =text_field_tag :username, :class=>'input-block-level', :placeholder => 'Email or Username'
+    =password_field_tag :password, :class => 'input-block-level', :placeholder=>'Password'
+    %label{:class=>'checkbox'}
+      %input{:type=> 'checkbox', :value=>'remember-me'}
+        Remember me
+    %button{:type=>'submit', :class=>'btn btn-large btn-primary'}
+      Sign In
+
+    
